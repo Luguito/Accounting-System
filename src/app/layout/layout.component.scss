@@ -3,5 +3,8 @@
 }
 
 .content_w_sidebar {
-    width: 14%;
+    width: 18%;
+    @media only screen and (min-width:1920px){
+        width: 14%;
+    }
 }
