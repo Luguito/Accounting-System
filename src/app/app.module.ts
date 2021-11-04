@@ -3,18 +3,40 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterComponent } from './register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CompanyComponent } from './company/company.component';
+import { HttpInterceptorService } from './http-interceptor.service';
+import { CreateRollerComponent } from './create-roller/create-roller.component';
+import { ListRollerComponent } from './list-roller/list-roller.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent
+    LoginComponent,
+    DashboardComponent,
+    RegisterComponent,
+    CompanyComponent,
+    CreateRollerComponent,
+    ListRollerComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
