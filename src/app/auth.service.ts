@@ -8,10 +8,13 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   createUser(user: User): Promise<any> {
-    console.log(user)
     return this.http.post(this.apiString + 'signup', user).toPromise();
   }
 
+  logInUser(user:Partial<User>) {
+    console.log(user)
+    return this.http.post(this.apiString + 'login', user).toPromise()
+  }
 
 }
 
