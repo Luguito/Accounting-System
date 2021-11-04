@@ -25,8 +25,7 @@ export class RegisterComponent implements OnInit {
   async signUp() {
     try {
       let res = await this.auth.createUser(this.loginForm.getRawValue());
-      console.log(res);
-      localStorage.setItem('token', JSON.stringify(res.data.access_token))
+      localStorage.setItem('token', res.data.access_token)
       this.router.navigate(['app/register-company']);
     } catch (e) {
       console.error(e)
