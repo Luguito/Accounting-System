@@ -8,7 +8,7 @@ import { Router } from '@angular/router'
   styleUrls: ['./company.component.scss']
 })
 export class CompanyComponent implements OnInit {
-  private companyForm: FormGroup = this.initCompanyForm;
+  companyForm: FormGroup = this.initCompanyForm;
   @Input() complete: boolean = false;
   constructor(private cp: CompanyService, private fb: FormBuilder, private router: Router) { }
 
