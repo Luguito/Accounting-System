@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
     try {
       let res = await this.auth.createUser(this.loginForm.getRawValue());
       localStorage.setItem('token', res.data.access_token)
-      this.router.navigate(['app/register-company']);
+      this.router.navigate(['complete-registry']);
     } catch (e) {
       console.error(e)
     }

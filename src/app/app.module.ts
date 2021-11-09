@@ -12,6 +12,7 @@ import { CompanyComponent } from './company/company.component';
 import { HttpInterceptorService } from './http-interceptor.service';
 import { CreateRollerComponent } from './create-roller/create-roller.component';
 import { ListRollerComponent } from './list-roller/list-roller.component';
+import { CompleteRegistryComponent } from './complete-registry/complete-registry.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ListRollerComponent } from './list-roller/list-roller.component';
     CompanyComponent,
     CreateRollerComponent,
     ListRollerComponent,
+    CompleteRegistryComponent,
   ],
   imports: [
     BrowserModule,
