@@ -13,7 +13,9 @@ export class CompleteRegistryComponent implements OnInit {
   ngOnInit(): void {
     let component = this.cfr.resolveComponentFactory(CompanyComponent)
 
-    this.body.createComponent(component)
+    let instance = this.body.createComponent(component);
+
+    instance.instance.complete = true;
   }
 
 }

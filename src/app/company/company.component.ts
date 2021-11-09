@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CompanyService } from '../company.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router'
@@ -8,7 +8,8 @@ import { Router } from '@angular/router'
   styleUrls: ['./company.component.scss']
 })
 export class CompanyComponent implements OnInit {
-  companyForm: FormGroup = this.initCompanyForm;
+  private companyForm: FormGroup = this.initCompanyForm;
+  @Input() complete: boolean = false;
   constructor(private cp: CompanyService, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void { }
