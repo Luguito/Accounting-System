@@ -18,14 +18,21 @@ export class RegisterComponent implements OnInit {
     return this.fb.group({
       'fullname': [, Validators.required],
       'email': [, Validators.required],
-      'password': [, Validators.required]
+      'password': [, Validators.required],
+      'repassword': [,Validators.required]
     })
   }
 
   async signUp() {
+    let loginObj = this.loginForm.getRawValue();
+
     try {
-      let res = await this.auth.createUser(this.loginForm.getRawValue());
-      localStorage.setItem('token', res.data.access_token)
+      if(loginObj.password !== loginObj.repassword) return;
+
+      let res = await this.auth.createUser(loginObj);
+      
+      localStorage.setItem('token', res.data.access_token);
+
       this.router.navigate(['complete-registry']);
     } catch (e) {
       console.error(e)

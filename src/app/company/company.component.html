@@ -23,25 +23,59 @@
     <div class="card-header">
         <div class="row align-items-center">
             <div class="col-8">
-                <h3 class="mb-0">Edit profile </h3>
+                <h3 class="mb-0">Datos del negocio</h3>
             </div>
             <div class="col-4 text-right">
                 <!-- <a href="#!" class="btn btn-sm btn-primary">Settings</a> -->
             </div>
         </div>
     </div>
-    <div class="card-body">
+    <div class="card-body company_body">
         <form>
-            <h6 class="heading-small text-muted mb-4">User information</h6>
             <div class="pl-lg-4" [formGroup]="companyForm">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label class="form-control-label" for="input-username">Name</label>
+                            <label class="form-control-label" for="input-username">Empresa / Negocio</label>
                             <input type="text" id="input-username" class="form-control" placeholder="Name"
                                 formControlName="name">
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label" for="input-address">Direccion</label>
+                            <input id="input-address" class="form-control" placeholder="Home Address"
+                                formControlName="address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                                type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-lg-4" [formGroup]="companyForm">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-control-label" for="input-country">Pais</label>
+                            <input type="text" id="input-country" class="form-control" placeholder="Country"
+                                formControlName="country" value="United States">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-control-label" for="input-country">Estado</label>
+                            <input type="text" id="input-postal-code" class="form-control" placeholder="State"
+                                formControlName="estate">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-control-label" for="input-city">Ciudad</label>
+                            <input type="text" id="input-city" class="form-control" placeholder="City"
+                                formControlName="city">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label class="form-control-label" for="input-email">Web site</label>
@@ -52,45 +86,7 @@
                 </div>
             </div>
             <hr class="my-4">
-            <!-- Address -->
-            <h6 class="heading-small text-muted mb-4">Contact information</h6>
-            <div class="pl-lg-4" [formGroup]="companyForm">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label class="form-control-label" for="input-address">Address</label>
-                            <input id="input-address" class="form-control" placeholder="Home Address"
-                                formControlName="address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
-                                type="text">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="form-group">
-                            <label class="form-control-label" for="input-city">City</label>
-                            <input type="text" id="input-city" class="form-control" placeholder="City"
-                                formControlName="city">
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="form-group">
-                            <label class="form-control-label" for="input-country">Country</label>
-                            <input type="text" id="input-country" class="form-control" placeholder="Country"
-                                formControlName="country" value="United States">
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="form-group">
-                            <label class="form-control-label" for="input-country">State</label>
-                            <input type="text" id="input-postal-code" class="form-control" placeholder="State"
-                                formControlName="estate">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-4">
         </form>
-        <button type="button" class="btn btn-success" (click)="createCompany()">Save</button>
+        <button type="button" class="btn btn-success align-self-end" (click)="createCompany()">Crear cuenta</button>
     </div>
 </div>

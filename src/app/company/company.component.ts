@@ -29,7 +29,6 @@ export class CompanyComponent implements OnInit {
   async createCompany() {
     try {
       let res = await this.cp.createCompany(this.companyForm.getRawValue());
-      console.log(res);
       this.router.navigate(['app/dashboard'])
     } catch (e) {
       console.error(e);

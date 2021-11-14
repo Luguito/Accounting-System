@@ -2,9 +2,14 @@
     width: 100%;
 }
 
-.content_w_sidebar {
-    width: 18%;
-    @media only screen and (min-width:1920px){
+.responsive_sidebar { 
+    @media only screen and (min-width:1280px) {
+        width: 18%;
+    }
+    @media only screen and (min-width:1600px) {
+        width: 15%;
+    }
+    @media only screen and (min-width:1920px) {
         width: 14%;
     }
-} 
+}
