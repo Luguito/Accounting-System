@@ -17,9 +17,7 @@
       "dom"
     ],
     "paths": {
-      "@services": [
-        "src/app/auth.service.ts"
-      ]
-    }
+      "@services": ["./src/app/services"]
+    },
   }
 }

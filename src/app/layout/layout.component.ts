@@ -17,8 +17,6 @@ export class LayoutComponent implements OnInit {
 
 
 import { CompanyComponent } from '../company/company.component';
-import { CreateRollerComponent } from '../create-roller/create-roller.component';
-import { ListRollerComponent } from '../list-roller/list-roller.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 
 const routes: Routes = [
@@ -26,8 +24,8 @@ const routes: Routes = [
     path: '', component: LayoutComponent, children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'register-company', component: CompanyComponent },
-      { path: 'register-user-seller', component: CreateRollerComponent },
-      { path: 'list-users-seller', component: ListRollerComponent }
+      { path: 'clients', loadChildren: () => import('../client-list/client-list.component').then(m => m.ClientListModule) },
+      { path: 'users', loadChildren: () => import('../user-list/user-list.component').then(m => m.UserListModule) },
     ]
   },
 ]

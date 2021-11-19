@@ -10,8 +10,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CompanyComponent } from './company/company.component';
 import { HttpInterceptorService } from './http-interceptor.service';
-import { CreateRollerComponent } from './create-roller/create-roller.component';
-import { ListRollerComponent } from './list-roller/list-roller.component';
 import { CompleteRegistryComponent } from './complete-registry/complete-registry.component';
 
 @NgModule({
@@ -21,8 +19,6 @@ import { CompleteRegistryComponent } from './complete-registry/complete-registry
     DashboardComponent,
     RegisterComponent,
     CompanyComponent,
-    CreateRollerComponent,
-    ListRollerComponent,
     CompleteRegistryComponent,
   ],
   imports: [
